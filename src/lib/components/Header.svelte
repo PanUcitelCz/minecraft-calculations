@@ -89,9 +89,9 @@
             @media only screen and (min-width: 768px)
                 position relative
 
-            @media only screen and (min-width: 1300pxpx)
+            @media only screen and (min-width: 1300px)
                 margin 0 auto
-                max-width 1300px
+                width 1300px
                 
         .logo
             position absolute
@@ -121,6 +121,10 @@
             transform translateY(30px)
             z-index 15
             background-color rgba(240, 255, 255, 0)
+        
+        @media only screen and (min-width: 1300px)
+            margin 0 auto
+            width 1300px
 
         &.is-active
                 
