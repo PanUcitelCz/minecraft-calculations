@@ -3,6 +3,7 @@
     import Header from "$lib/components/Header.svelte";
 
 </script>
+
 <Header />
 <main>
    <slot /> <!--kam se propíše vše ostatní!-->
@@ -16,5 +17,5 @@
     main
         margin 0 15px
         max-width 1300px
-        
+
 </style>
