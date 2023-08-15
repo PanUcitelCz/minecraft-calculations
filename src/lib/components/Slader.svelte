@@ -7,9 +7,9 @@
 
 <style lang="stylus">
     
-    :global(main)
+    /*:global(main)
         padding 0 !important
-        margin 0 !important
+        margin 0 !important*/
     
     .slader
         width 100%

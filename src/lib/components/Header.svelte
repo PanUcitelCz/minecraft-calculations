@@ -68,10 +68,6 @@
         </ul>
     </nav>
 <style lang="stylus">
-
-    :global(body)
-        margin 0
-        padding 0
         
     header
         background-color #5D5D5D
@@ -87,9 +83,15 @@
             background-color #5D5D5D
             width 100%
             height 90px
+            
+
 
             @media only screen and (min-width: 768px)
                 position relative
+
+            @media only screen and (min-width: 1300pxpx)
+                margin 0 auto
+                max-width 1300px
                 
         .logo
             position absolute
