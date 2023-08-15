@@ -1,72 +1,72 @@
 <script lang="ts">
-    console.log("ahoj");
+	console.log('ahoj');
 
-    import { onMount } from 'svelte';
+	import { onMount } from 'svelte';
 
-    let isActive = false;
+	let isActive = false;
 
-    onMount(() => {
-        const hamburger = document.querySelector(".hamburger");
-        const nav = document.querySelector("nav");
+	onMount(() => {
+		const hamburger = document.querySelector('.hamburger');
+		const nav = document.querySelector('nav');
 
-        let state = true;
+		let state = true;
 
-        window.addEventListener('resize', () => {
-            if (window.innerWidth < 768) {
-                if (hamburger && nav) {
-                    hamburger.classList.remove("is-active");
-                    nav.classList.remove("is-active");
-                }
-            }
-        });
+		window.addEventListener('resize', () => {
+			if (window.innerWidth < 768) {
+				if (hamburger && nav) {
+					hamburger.classList.remove('is-active');
+					nav.classList.remove('is-active');
+				}
+			}
+		});
 
-        if (hamburger) {
-            hamburger.addEventListener("click", () => {
-                isActive = !isActive; // Přepnutí hodnoty proměnné isActive
-                if (state) {
-                    if (nav) {
-                        hamburger.classList.remove("is-active");
-                        nav.classList.remove("is-active");
-                    }
-                    state = false;
-                } else {
-                    if (nav) {
-                        hamburger.classList.add("is-active");
-                        nav.classList.add("is-active");
-                    }
-                    state = true;
-                }
-            });
-        }
-    });
-    
-        //TS - deklarace urcit datový typ
+		if (hamburger) {
+			hamburger.addEventListener('click', () => {
+				isActive = !isActive; // Přepnutí hodnoty proměnné isActive
+				if (state) {
+					if (nav) {
+						hamburger.classList.remove('is-active');
+						nav.classList.remove('is-active');
+					}
+					state = false;
+				} else {
+					if (nav) {
+						hamburger.classList.add('is-active');
+						nav.classList.add('is-active');
+					}
+					state = true;
+				}
+			});
+		}
+	});
 
+	//TS - deklarace urcit datový typ
 </script>
 
 <header>
-    <div class="wrapper">
-        <div class="logo">
-            <img src="https://www.souepl.cz/wp-content/uploads/2022/07/logo_velke_b-3.png" alt="">
-        </div>
-        <div class="hamburger {isActive ? 'is-active' : ''}">
-            <span class="stick1 stick"></span>
-            <span class="stick2 stick"></span>
-            <span class="stick3 stick"></span>
-        </div>
-    </div>
+	<div class="wrapper">
+		<div class="logo">
+			<img src="https://www.souepl.cz/wp-content/uploads/2022/07/logo_velke_b-3.png" alt="" />
+		</div>
+		<div class="hamburger {isActive ? 'is-active' : ''}">
+			<span class="stick1 stick" />
+			<span class="stick2 stick" />
+			<span class="stick3 stick" />
+		</div>
+	</div>
 </header>
 <nav class="nav {isActive ? 'is-active' : ''}">
-        <ul>
-            <li><a href="/">Suplování</a></li>
-            <li><a href="#">Bakaláři</a></li>
-            <li><a href="#">Domov mládeže</a></li>
-            <li><a href="#">Školní jídelna</a></li>
-            <li><a href="#">O nás</a></li>
-            <li><a href="#">Kontakt</a></li>
-            <li><a href="#">Výuka na dálku</a></li>
-        </ul>
-    </nav>
+	<ul>
+		<li><a href="/">Suplování</a></li>
+		<li><a href="#">Bakaláři</a></li>
+		<li><a href="#">Domov mládeže</a></li>
+		<li><a href="#">Školní jídelna</a></li>
+		<li><a href="#">O nás</a></li>
+		<li><a href="#">Kontakt</a></li>
+		<li><a href="#">Výuka na dálku</a></li>
+	</ul>
+</nav>
+
 <style lang="stylus">
         
     header
