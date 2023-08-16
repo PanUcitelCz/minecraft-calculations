@@ -10,7 +10,7 @@
     footer
         margin 0
         padding 0
-        background-color #A0C334
+        background-color #5D5D5D
         height 60px
         display flex
         justify-content center
