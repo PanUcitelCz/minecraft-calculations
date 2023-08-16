@@ -2,9 +2,6 @@
 	import Card from '$components/Card.svelte';
 </script>
 
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
-
 <div class="wrapper">
 	<Card label="Student" src="https://c1.wallpaperflare.com/preview/278/571/763/student-library-books-book.jpg" href="/" />
 	<Card label="Uchazeč" src="https://cdn.pixabay.com/photo/2015/09/04/10/42/study-921885_1280.jpg"  href="/" />
@@ -18,4 +15,10 @@
 		gap 12px
 		padding 12px
 		padding-top 0
+
+		@media only screen and (max-width 839px)
+			grid-template-columns repeat(2, 1fr)
+
+		@media only screen and (max-width 468px)
+			grid-template-columns repeat(1, 1fr)
 </style>
