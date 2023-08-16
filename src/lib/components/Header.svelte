@@ -55,17 +55,20 @@
 		</div>
 	</div>
 </header>
-<nav class="nav {isActive ? 'is-active' : ''}">
-	<ul>
-		<li><a href="/">Suplování</a></li>
-		<li><a href="#">Bakaláři</a></li>
-		<li><a href="#">Domov mládeže</a></li>
-		<li><a href="#">Školní jídelna</a></li>
-		<li><a href="#">O nás</a></li>
-		<li><a href="#">Kontakt</a></li>
-		<li><a href="#">Výuka na dálku</a></li>
-	</ul>
-</nav>
+<div class="wrapper">
+    <nav class="nav {isActive ? 'is-active' : ''}">
+        <ul>
+            <li><a href="/">Suplování</a></li>
+            <li><a href="/">Bakaláři</a></li>
+            <li><a href="/">Domov mládeže</a></li>
+            <li><a href="/">Školní jídelna</a></li>
+            <li><a href="/">O nás</a></li>
+            <li><a href="/">Kontakt</a></li>
+            <li><a href="/">Výuka na dálku</a></li>
+        </ul>
+    </nav>
+</div>
+
 
 <style lang="stylus">
         
@@ -104,11 +107,13 @@
             img
                 width 65%
                 
-
+    .wrapper
+        margin 0 auto
+        max-width 1300px
     .nav
         position absolute
         top 0
-        left 0
+        //right 0
         transition ease transform 0.3s, ease opacity .3s
         transform-origin 50% 50%
         z-index 5
@@ -116,15 +121,18 @@
         background-color #5D5D5D
         transform translateY(-185px)
         width 100%
+        max-width 1300px
 
-        @media only screen and (min-width: 780px)
+        @media only screen and (min-width: 839px)
             transform translateY(30px)
             z-index 15
             background-color rgba(240, 255, 255, 0)
         
         @media only screen and (min-width: 1300px)
             margin 0 auto
-            width 1300px
+            //width 1300px
+            display flex
+            justify-content center
 
         &.is-active
                 
@@ -140,7 +148,7 @@
             justify-content center
             flex-direction column
 
-            @media only screen and (min-width: 768px)
+            @media only screen and (min-width: 839px)
                 display flex
                 flex-direction row
                 justify-content end
@@ -165,7 +173,7 @@
     cursor pointer
     z-index 100
 
-    @media only screen and (min-width: 768px)
+    @media only screen and (min-width: 839px)
         display none
     
     &.is-active
