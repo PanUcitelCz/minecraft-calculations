@@ -65,13 +65,12 @@
 		position relative
 		height 150px
 		//margin 0 auto
-		width 98%
 		display flex
 		justify-content center
 		align-content center
 		text-align center
 		background #9fc334d5
-		margin 15px auto
+		margin 11.8px
 		flex-direction column
 
 		h1, h2
@@ -104,12 +103,12 @@
 		
 	.text
 		position relative
-		margin 15px auto
-		width 96%
+		margin 11.8px
 		height fit-content
 		background-color #5D5D5D
 		padding 15px
 		color white
+		
 
 		p
 			font-weight 100

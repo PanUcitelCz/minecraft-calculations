@@ -53,21 +53,20 @@
 			<span class="stick2 stick" />
 			<span class="stick3 stick" />
 		</div>
+        <nav class="nav {isActive ? 'is-active' : ''}">
+            <ul>
+                <li><a href="/">Suplování</a></li>
+                <li><a href="/">Bakaláři</a></li>
+                <li><a href="/">Domov mládeže</a></li>
+                <li><a href="/">Školní jídelna</a></li>
+                <li><a href="/">O nás</a></li>
+                <li><a href="/">Kontakt</a></li>
+                <li><a href="/">Výuka na dálku</a></li>
+            </ul>
+        </nav>
 	</div>
 </header>
-<div class="wrapper">
-    <nav class="nav {isActive ? 'is-active' : ''}">
-        <ul>
-            <li><a href="/">Suplování</a></li>
-            <li><a href="/">Bakaláři</a></li>
-            <li><a href="/">Domov mládeže</a></li>
-            <li><a href="/">Školní jídelna</a></li>
-            <li><a href="/">O nás</a></li>
-            <li><a href="/">Kontakt</a></li>
-            <li><a href="/">Výuka na dálku</a></li>
-        </ul>
-    </nav>
-</div>
+
 
 
 
