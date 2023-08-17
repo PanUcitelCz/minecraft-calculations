@@ -1,11 +1,23 @@
 <script lang="ts">
-	let isOpen = false;
+	import { onMount } from 'svelte';
+
+	let desktop: MediaQueryList;
+
+	onMount(() => {
+		desktop = window.matchMedia('(min-width: 991px)');
+	});
 
 	const resize = () => {
-		if (window.matchMedia('(min-width: 991px)').matches) {
+		if (desktop.matches) {
 			isOpen = false;
 		}
 	};
+
+	const changeOpenState = () => {
+		isOpen = !isOpen;
+	};
+
+	let isOpen = false;
 </script>
 
 <svelte:window on:resize={resize} />
@@ -15,13 +27,7 @@
 		<div class="Header-logo">
 			<img src="images/logo.svg" alt="" />
 		</div>
-		<button
-			class="Hamburger"
-			class:isOpen
-			on:click={() => {
-				isOpen = !isOpen;
-			}}
-		>
+		<button class="Hamburger" class:isOpen on:click={changeOpenState}>
 			<span class="Hamburger-stick" />
 			<span class="Hamburger-stick" />
 			<span class="Hamburger-stick" />
@@ -45,7 +51,6 @@
         position relative
         display flex
         justify-content center
-        position relative
         width 100%
         height 96px
         background-color #5D5D5D
@@ -55,8 +60,8 @@
             z-index 2
             display flex
             justify-content space-between
-            gap 48px
             align-items center
+            gap 48px
             padding 0 48px
             width 100%
             max-width 1300px
@@ -65,11 +70,10 @@
                 content ""
                 position absolute
                 z-index 1
-                inset 0
-                background-color #5D5D5D
-                width 50
-                height 100%
                 left 50%
+                width 100%
+                height 100%
+                background-color #5D5D5D
                 transform translateX(-50%)
 
                 @media only screen and (min-width 991px)
@@ -87,10 +91,11 @@
             left 0
             width 100%
             transform translateY(-100%)
-            transition transform .3s ease
+            transition transform .6s $easeOutExpo
 
             @media only screen and (min-width: 991px)
                 position static
+                transition none
                 transform none
             
             &.isOpen
@@ -101,17 +106,18 @@
                 display flex
                 align-items center
                 justify-content center
-                list-style-type none
-                gap 24px
                 flex-direction column
+                gap 24px
+                list-style-type none
                 padding-left 0
                 margin 0
                 padding 24px
-                padding-top 96px
+                padding-top 108px
                 background #5D5D5D
 
                 @media only screen and (min-width: 991px)
-                    padding-top 24px
+                    gap 12px
+                    padding 0
                     display flex
                     flex-direction row
                     justify-content flex-end
@@ -120,11 +126,19 @@
 
                     a
                         text-decoration none
-                        color #F7F7F7
-                        font-weight bold
+                        color white
+                        font-weight 600
+                        padding 8px 12px
+                        border-radius 3px
+                        background transparent
+                        transition background .3s $easeOutExpo
+
+                        @media only screen and (min-width: 991px)
+                            padding 8px
+
 
                         &:hover
-                            text-decoration underline
+                            background grey
 
     .Hamburger
         display block
@@ -149,6 +163,7 @@
 
                 &:nth-child(2)
                     opacity 0
+                    transform: translateX(-30px)
 
                 &:nth-child(3)
                     transform rotate(-45deg) translate(7px,-7px)
@@ -161,8 +176,7 @@
             height 3px
             border-radius 5px
             opacity 1
-            transition ease transform 0.3s, ease opacity .3s
-            // transform-origin 50% 50%
+            transition $easeOutExpo transform .6s, $easeOutExpo opacity 1s
 
             &:nth-child(1)
                 top 0

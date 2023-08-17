@@ -73,7 +73,7 @@
 			href="/"
 		/>
 	</div>
-	<div class="Text">
+	<div class="Text" style="margin-top: 24px;">
 		<h3>Jednoleté zkrácené studium oboru Elektrikář</h3>
 		<p>
 			Datum zahájení záleží na tom, do jaké třídy jste byl(a) zařazen(a). V případě, že jste
@@ -124,7 +124,6 @@
 		gap 12px
 		padding-top 0
 		position relative
-		margin-bottom 24px
 
 		@media only screen and (min-width 420px)
 			grid-template-columns repeat(2, 1fr)
@@ -138,15 +137,17 @@
 		display grid
 
 		h2
-			padding 48px 0
+			margin 48px 0
 			text-align center
-			margin 0
 		
 	.Text
 		background-color #5D5D5D
 		padding  32px 24px
-		margin-bottom 24px
+		margin-bottom 12px
 		color white
+
+		@media only screen and (min-width 991px)
+			margin-bottom 24px
 
 		h3
 			margin 0
