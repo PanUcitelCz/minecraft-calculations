@@ -1,10 +1,10 @@
 <script lang="ts">
 	export let label: string;
 	export let src: string;
-    export let href: string;
+	export let href: string;
 </script>
 
-<a class="Card" href={href}>
+<a class="Card" {href}>
 	<h2 class="Card-heading">
 		{label}
 	</h2>
