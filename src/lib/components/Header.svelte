@@ -71,6 +71,11 @@
                 height 100%
                 left 50%
                 transform translateX(-50%)
+
+                @media only screen and (min-width 991px)
+                    display none
+
+
         &-logo
             position relative
             z-index 4
