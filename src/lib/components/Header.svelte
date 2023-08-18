@@ -35,7 +35,7 @@
 		<nav class="Header-nav" class:isOpen>
 			<ul>
 				<li><a href="/">Suplování</a></li>
-				<li><a href="/">Bakaláři</a></li>
+				<li><a href="https://bakalari.souepl.cz/Login">Bakaláři</a></li>
 				<li><a href="/">Domov mládeže</a></li>
 				<li><a href="/">Školní jídelna</a></li>
 				<li><a href="/">O nás</a></li>
