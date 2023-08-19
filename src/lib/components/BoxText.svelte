@@ -1,14 +1,14 @@
 <script lang="ts">
-    export let nadpis: string;
-    export let color: string;
-    export let text: string;
+	export let nadpis: string;
+	export let color: string;
+	export let text: string;
 </script>
 
 <div class="Text {color}">
-    <h3>{nadpis}</h3>
-    <p>
-        {text}
-    </p>
+	<h3>{nadpis}</h3>
+	<p>
+		{text}
+	</p>
 </div>
 
 <style lang="stylus">

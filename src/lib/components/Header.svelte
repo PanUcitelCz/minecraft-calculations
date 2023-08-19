@@ -1,49 +1,49 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
+    import { onMount } from 'svelte'
 
-	let desktop: MediaQueryList;
+    let desktop: MediaQueryList
 
-	onMount(() => {
-		desktop = window.matchMedia('(min-width: 991px)');
-	});
+    onMount(() => {
+        desktop = window.matchMedia('(min-width: 991px)')
+    })
 
-	const resize = () => {
-		if (desktop.matches) {
-			isOpen = false;
-		}
-	};
+    const resize = () => {
+        if (desktop.matches) {
+            isOpen = false
+        }
+    }
 
-	const changeOpenState = () => {
-		isOpen = !isOpen;
-	};
+    const changeOpenState = () => {
+        isOpen = !isOpen
+    }
 
-	let isOpen = false;
+    let isOpen = false
 </script>
 
 <svelte:window on:resize={resize} />
 
 <header class="Header">
-	<div class="Header-wrapper">
-		<div class="Header-logo">
-			<img src="images/logo.svg" alt="" />
-		</div>
-		<button class="Hamburger" class:isOpen on:click={changeOpenState}>
-			<span class="Hamburger-stick" />
-			<span class="Hamburger-stick" />
-			<span class="Hamburger-stick" />
-		</button>
-		<nav class="Header-nav" class:isOpen>
-			<ul>
-				<li><a href="/">Suplování</a></li>
-				<li><a href="https://bakalari.souepl.cz/Login">Bakaláři</a></li>
-				<li><a href="/">Domov mládeže</a></li>
-				<li><a href="/">Školní jídelna</a></li>
-				<li><a href="/">O nás</a></li>
-				<li><a href="/">Kontakt</a></li>
-				<li><a href="/">Výuka na dálku</a></li>
-			</ul>
-		</nav>
-	</div>
+    <div class="Header-wrapper">
+        <div class="Header-logo">
+            <img src="images/logo.svg" alt="" />
+        </div>
+        <button class="Hamburger" class:isOpen on:click={changeOpenState}>
+            <span class="Hamburger-stick" />
+            <span class="Hamburger-stick" />
+            <span class="Hamburger-stick" />
+        </button>
+        <nav class="Header-nav" class:isOpen>
+            <ul>
+                <li><a href="/">Suplování</a></li>
+                <li><a href="https://bakalari.souepl.cz/Login">Bakaláři</a></li>
+                <li><a href="/">Domov mládeže</a></li>
+                <li><a href="/">Školní jídelna</a></li>
+                <li><a href="/">O nás</a></li>
+                <li><a href="/">Kontakt</a></li>
+                <li><a href="/">Výuka na dálku</a></li>
+            </ul>
+        </nav>
+    </div>
 </header>
 
 <style lang="stylus">
